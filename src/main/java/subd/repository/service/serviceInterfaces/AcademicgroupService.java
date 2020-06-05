@@ -7,9 +7,9 @@ import java.util.Optional;
 
 @Service
 public interface AcademicgroupService {
-    Academicgroup addAcademicgroup(Academicgroup academicgroup);
+    Academicgroup addacademicgroup(Academicgroup academicgroup);
     void delete(int id);
     Optional<Academicgroup> getById(int id);
-    Academicgroup editAcademicgroup(Academicgroup academicgroup);
+    Academicgroup editacademicgroup(Academicgroup academicgroup);
     List<Academicgroup> getAll();
 }

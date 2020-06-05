@@ -13,9 +13,9 @@ public class AcademicPerformanceServiceImpl implements AcademicPerformanceServic
     @Autowired
     private AcademicPerformanceRepository academicPerformanceRepository;
     @Override
-    public AcademicPerformance addAcademicPerfomance(AcademicPerformance academicPerformance) {
-        AcademicPerformance savedAcademicPerformance = academicPerformanceRepository.saveAndFlush(academicPerformance);
-        return savedAcademicPerformance;
+    public AcademicPerformance addacademicPerfomance(AcademicPerformance academicPerformance) {
+        AcademicPerformance savedacademicPerformance = academicPerformanceRepository.saveAndFlush(academicPerformance);
+        return savedacademicPerformance;
     }
     @Override
     public void delete(int id) {
@@ -26,7 +26,7 @@ public class AcademicPerformanceServiceImpl implements AcademicPerformanceServic
         return academicPerformanceRepository.findById(id);
     }
     @Override
-    public AcademicPerformance editAcademicPerformance(AcademicPerformance academicPerformance) {
+    public AcademicPerformance editacademicPerformance(AcademicPerformance academicPerformance) {
         return academicPerformanceRepository.saveAndFlush(academicPerformance);
     }
     @Override

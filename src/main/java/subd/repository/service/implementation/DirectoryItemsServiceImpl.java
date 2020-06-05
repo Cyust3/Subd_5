@@ -13,9 +13,9 @@ public class DirectoryItemsServiceImpl implements DirectoryItemsService {
     @Autowired
     private DirectoryItemsRepository directoryItemsRepository;
     @Override
-    public DirectoryItems addDirectoryItems(DirectoryItems directoryItems) {
-        DirectoryItems savedDirectoryItems = directoryItemsRepository.saveAndFlush(directoryItems);
-        return savedDirectoryItems;
+    public DirectoryItems adddirectoryItems(DirectoryItems directoryItems) {
+        DirectoryItems saveddirectoryItems = directoryItemsRepository.saveAndFlush(directoryItems);
+        return saveddirectoryItems;
     }
     @Override
     public void delete(int id) {
@@ -26,7 +26,7 @@ public class DirectoryItemsServiceImpl implements DirectoryItemsService {
         return directoryItemsRepository.findById(id);
     }
     @Override
-    public DirectoryItems editDirectoryItems(DirectoryItems directoryItems) {
+    public DirectoryItems editdirectoryItems(DirectoryItems directoryItems) {
         return directoryItemsRepository.saveAndFlush(directoryItems);
     }
     @Override

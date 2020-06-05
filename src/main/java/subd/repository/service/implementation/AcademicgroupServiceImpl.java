@@ -13,9 +13,9 @@ public class AcademicgroupServiceImpl implements AcademicgroupService {
     @Autowired
     private AcademicgroupRepository academicgroupRepository;
     @Override
-    public Academicgroup addAcademicgroup(Academicgroup academicgroup) {
-        Academicgroup savedAcademicgroup = academicgroupRepository.saveAndFlush(academicgroup);
-        return savedAcademicgroup;
+    public Academicgroup addacademicgroup(Academicgroup academicgroup) {
+        Academicgroup savedacademicgroup = academicgroupRepository.saveAndFlush(academicgroup);
+        return savedacademicgroup;
     }
     @Override
     public void delete(int id) {
@@ -26,7 +26,7 @@ public class AcademicgroupServiceImpl implements AcademicgroupService {
         return academicgroupRepository.findById(id);
     }
     @Override
-    public Academicgroup editAcademicgroup(Academicgroup academicgroup) {
+    public Academicgroup editacademicgroup(Academicgroup academicgroup) {
         return academicgroupRepository.saveAndFlush(academicgroup);
     }
     @Override

@@ -7,9 +7,9 @@ import java.util.Optional;
 
 @Service
 public interface StudentService {
-    Student addStudent(Student student);
+    Student addstudent(Student student);
     void delete(int id);
     Optional<Student> getById(int id);
-    Student editStudent(Student student);
+    Student editstudent(Student student);
     List<Student> getAll();
 }

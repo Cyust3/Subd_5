@@ -7,9 +7,9 @@ import java.util.Optional;
 
 @Service
 public interface TeachersService {
-    Teachers addTeachers(Teachers teachers);
+    Teachers addteachers(Teachers teachers);
     void delete(int id);
     Optional<Teachers> getById(int id);
-    Teachers editTeachers(Teachers teachers);
+    Teachers editteachers(Teachers teachers);
     List<Teachers> getAll();
 }

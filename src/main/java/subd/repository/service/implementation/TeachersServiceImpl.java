@@ -13,9 +13,9 @@ public class TeachersServiceImpl implements TeachersService {
     @Autowired
     private TeachersRepository teachersRepository;
     @Override
-    public Teachers addTeachers(Teachers teachers) {
-        Teachers savedTeachers = teachersRepository.saveAndFlush(teachers);
-        return savedTeachers;
+    public Teachers addteachers(Teachers teachers) {
+        Teachers savedteachers = teachersRepository.saveAndFlush(teachers);
+        return savedteachers;
     }
     @Override
     public void delete(int id) {
@@ -26,7 +26,7 @@ public class TeachersServiceImpl implements TeachersService {
         return teachersRepository.findById(id);
     }
     @Override
-    public Teachers editTeachers(Teachers teachers) {
+    public Teachers editteachers(Teachers teachers) {
         return teachersRepository.saveAndFlush(teachers);
     }
     @Override

@@ -13,9 +13,9 @@ public class StudentServiceImpl implements StudentService {
     @Autowired
     private StudentRepository studentRepository;
     @Override
-    public Student addStudent(Student student) {
-        Student savedStudent = studentRepository.saveAndFlush(student);
-        return savedStudent;
+    public Student addstudent(Student student) {
+        Student savedstudent = studentRepository.saveAndFlush(student);
+        return savedstudent;
     }
     @Override
     public void delete(int id) {
@@ -26,7 +26,7 @@ public class StudentServiceImpl implements StudentService {
         return studentRepository.findById(id);
     }
     @Override
-    public Student editStudent(Student student) {
+    public Student editstudent(Student student) {
         return studentRepository.saveAndFlush(student);
     }
     @Override

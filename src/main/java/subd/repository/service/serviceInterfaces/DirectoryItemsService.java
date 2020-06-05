@@ -7,9 +7,9 @@ import java.util.Optional;
 
 @Service
 public interface DirectoryItemsService {
-    DirectoryItems addDirectoryItems(DirectoryItems directoryItems);
+    DirectoryItems adddirectoryItems(DirectoryItems directoryItems);
     void delete(int id);
     Optional<DirectoryItems> getById(int id);
-    DirectoryItems editDirectoryItems(DirectoryItems directoryItems);
+    DirectoryItems editdirectoryItems(DirectoryItems directoryItems);
     List<DirectoryItems> getAll();
 }

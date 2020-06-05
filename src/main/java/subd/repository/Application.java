@@ -58,14 +58,14 @@ public class Application {
     @EventListener(ApplicationReadyEvent.class)
     public void onStart() {
 
-        //this.readAcademicPerformance();
-        //this.readAcademicGroup();
-        //this.readDirectoryItems();
-        //this.readStudent();
-        //this.readTeachers();
-        this.FirstRequest();
-        //this.SecondRequest();
-        //this.ThirdRequest();
+        this.readAcademicPerformance();
+        this.readAcademicGroup();
+        this.readDirectoryItems();
+        this.readStudent();
+        this.readTeachers();
+        this.firstRequest();
+        this.secondRequest();
+        this.thirdRequest();
     }
 
     public void readAcademicPerformance (){
@@ -103,16 +103,16 @@ public class Application {
         System.out.println("Request time: " + (end.getTime() - start.getTime()) + " ms");
     }
 
-    public void FirstRequest(){
+    public void firstRequest(){
         Timestamp start = new Timestamp(System.currentTimeMillis());
         System.out.println(teachersService.getAll());
         Timestamp end = new Timestamp(System.currentTimeMillis());
         System.out.println("Request time: " + (end.getTime() - start.getTime()) + " ms");
     }
 
-    public void SecondRequest(){
+    public void secondRequest(){
         Timestamp start = new Timestamp(System.currentTimeMillis());
-        List<TeachersgetByTelefon> resultFirst = teachersRepository.Teachers();
+        List<TeachersgetByTelefon> resultFirst = teachersRepository.teachers();
         Timestamp end = new Timestamp(System.currentTimeMillis());
         System.out.println("Request time: " + (end.getTime() - start.getTime()) + " ms");
         resultFirst.forEach(TeachersgetByTelefon -> {
@@ -125,9 +125,9 @@ public class Application {
         });
     }
 
-    public void ThirdRequest() {
+    public void thirdRequest() {
 		Timestamp start = new Timestamp(System.currentTimeMillis());
-		List<StudentRating> resultFirst = studentRepository.Studets();
+		List<StudentRating> resultFirst = studentRepository.studets();
 		Timestamp end = new Timestamp(System.currentTimeMillis());
         System.out.println("Request time: " + (end.getTime() - start.getTime()) + " ms");
 		resultFirst.forEach(StudentRating -> {
