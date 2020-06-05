@@ -12,4 +12,5 @@ public interface AcademicPerformanceService {
     Optional<AcademicPerformance> getById(int id);
     AcademicPerformance editacademicPerformance(AcademicPerformance academicPerformance);
     List<AcademicPerformance> getAll();
+    List<AcademicPerformance> getAll(int offset,int count);
 }

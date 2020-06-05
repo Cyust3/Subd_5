@@ -12,4 +12,5 @@ public interface TeachersService {
     Optional<Teachers> getById(int id);
     Teachers editteachers(Teachers teachers);
     List<Teachers> getAll();
+    List<Teachers> getAll(int offset,int count);
 }

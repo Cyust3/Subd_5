@@ -12,4 +12,5 @@ public interface DirectoryItemsService {
     Optional<DirectoryItems> getById(int id);
     DirectoryItems editdirectoryItems(DirectoryItems directoryItems);
     List<DirectoryItems> getAll();
+    List<DirectoryItems> getAll(int offset,int count);
 }

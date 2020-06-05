@@ -3,8 +3,10 @@ package subd.repository.service.implementation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import subd.repository.entity.AcademicPerformance;
+import subd.repository.model.OffsetablePageRequest;
 import subd.repository.repository.AcademicPerformanceRepository;
 import subd.repository.service.serviceInterfaces.AcademicPerformanceService;
+
 import java.util.List;
 import java.util.Optional;
 
@@ -32,5 +34,9 @@ public class AcademicPerformanceServiceImpl implements AcademicPerformanceServic
     @Override
     public List<AcademicPerformance> getAll() {
         return academicPerformanceRepository.findAll();
+    }
+    @Override
+    public List<AcademicPerformance> getAll(int offset,int count){
+        return academicPerformanceRepository.findAll(new OffsetablePageRequest(offset,count)).toList();
     }
 }

@@ -3,8 +3,10 @@ package subd.repository.service.implementation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import subd.repository.entity.Academicgroup;
+import subd.repository.model.OffsetablePageRequest;
 import subd.repository.repository.AcademicgroupRepository;
 import subd.repository.service.serviceInterfaces.AcademicgroupService;
+
 import java.util.List;
 import java.util.Optional;
 
@@ -32,5 +34,9 @@ public class AcademicgroupServiceImpl implements AcademicgroupService {
     @Override
     public List<Academicgroup> getAll() {
         return academicgroupRepository.findAll();
+    }
+    @Override
+    public List<Academicgroup> getAll(int offset,int count){
+        return academicgroupRepository.findAll(new OffsetablePageRequest(offset,count)).toList();
     }
 }

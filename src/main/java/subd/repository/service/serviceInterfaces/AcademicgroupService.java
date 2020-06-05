@@ -12,4 +12,5 @@ public interface AcademicgroupService {
     Optional<Academicgroup> getById(int id);
     Academicgroup editacademicgroup(Academicgroup academicgroup);
     List<Academicgroup> getAll();
+    List<Academicgroup> getAll(int offset,int count);
 }

@@ -72,31 +72,31 @@ public class Application {
     }
 
     private void readAcademicgroup() {
-        for (Academicgroup academicgroup : academicgroupService.getAll()) {
+        for (Academicgroup academicgroup : academicgroupService.getAll(0, 5)) {
             System.out.println(academicgroup);
         }
     }
 
     private void readAcademicPerformance(){
-        for(AcademicPerformance academicPerformance : academicPerformanceService.getAll()){
+        for(AcademicPerformance academicPerformance : academicPerformanceService.getAll(0, 5)){
             System.out.println(academicPerformance);
         }
     }
 
     private void readDirectoryItems(){
-        for (DirectoryItems directoryItems : directoryItemsService.getAll()){
+        for (DirectoryItems directoryItems : directoryItemsService.getAll(0, 5)){
             System.out.println(directoryItems);
         }
     }
 
     private void readStudent(){
-        for(Student student : studentService.getAll()){
+        for(Student student : studentService.getAll(0, 5)){
             System.out.println(student);
         }
     }
 
     private void readTeachers(){
-        for(Teachers teachers : teachersService.getAll()){
+        for(Teachers teachers : teachersService.getAll(0, 5)){
             System.out.println(teachers);
         }
     }

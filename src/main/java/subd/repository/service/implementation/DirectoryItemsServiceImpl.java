@@ -3,8 +3,10 @@ package subd.repository.service.implementation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import subd.repository.entity.DirectoryItems;
+import subd.repository.model.OffsetablePageRequest;
 import subd.repository.repository.DirectoryItemsRepository;
 import subd.repository.service.serviceInterfaces.DirectoryItemsService;
+
 import java.util.List;
 import java.util.Optional;
 
@@ -32,5 +34,9 @@ public class DirectoryItemsServiceImpl implements DirectoryItemsService {
     @Override
     public List<DirectoryItems> getAll() {
         return directoryItemsRepository.findAll();
+    }
+    @Override
+    public List<DirectoryItems> getAll(int offset,int count){
+        return directoryItemsRepository.findAll(new OffsetablePageRequest(offset,count)).toList();
     }
 }

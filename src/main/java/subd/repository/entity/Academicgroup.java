@@ -9,7 +9,6 @@ public class Academicgroup {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-
     private String groupname;
 
     @ManyToOne

@@ -3,8 +3,10 @@ package subd.repository.service.implementation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import subd.repository.entity.Teachers;
+import subd.repository.model.OffsetablePageRequest;
 import subd.repository.repository.TeachersRepository;
 import subd.repository.service.serviceInterfaces.TeachersService;
+
 import java.util.List;
 import java.util.Optional;
 
@@ -32,5 +34,9 @@ public class TeachersServiceImpl implements TeachersService {
     @Override
     public List<Teachers> getAll() {
         return teachersRepository.findAll();
+    }
+    @Override
+    public List<Teachers> getAll(int offset,int count){
+        return teachersRepository.findAll(new OffsetablePageRequest(offset,count)).toList();
     }
 }

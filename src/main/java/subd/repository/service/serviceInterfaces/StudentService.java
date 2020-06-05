@@ -12,4 +12,5 @@ public interface StudentService {
     Optional<Student> getById(int id);
     Student editstudent(Student student);
     List<Student> getAll();
+    List<Student> getAll(int offset,int count);
 }
