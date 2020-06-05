@@ -5,10 +5,10 @@ package subd.repository.repository;
 
 public class StudentRating {
 
-    public StudentRating(String surname, String name, String middle_name, String rating) {
+    public StudentRating(String surname, String name, String middleName, String rating) {
         this.surname = surname;
         this.name = name;
-        this.middle_name = middle_name;
+        this.middleName = middleName;
         this.rating = rating;
     }
 
@@ -16,7 +16,7 @@ public class StudentRating {
 
     private String name;
 
-    private String middle_name;
+    private String middleName;
 
     private String rating;
 
@@ -36,12 +36,12 @@ public class StudentRating {
         this.name = name;
     }
 
-    public String getMiddle_name() {
-        return middle_name;
+    public String getMiddleName() {
+        return middleName;
     }
 
-    public void setMiddle_name(String middle_name) {
-        this.middle_name = middle_name;
+    public void setMiddleName(String middleName) {
+        this.middleName = middleName;
     }
 
     public String getRating() {

@@ -14,7 +14,7 @@ public class Student {
 
     private String name;
 
-    private String middle_name;
+    private String middleName;
 
     private String telephone;
 
@@ -31,7 +31,7 @@ public class Student {
                 " id=" + id + ",\n" +
                 " surname=" + surname + ",\n" +
                 " name=" + name + ",\n" +
-                " middle_name=" + middle_name + ",\n" +
+                " middleName=" + middleName + ",\n" +
                 " telephone=" + telephone + ",\n" +
                 "}" + "\n";
     }

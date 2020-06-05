@@ -14,9 +14,9 @@ public class Teachers {
 
     private String name;
 
-    private String middle_name;
+    private String middleName;
 
-    private String academic_subjects;
+    private String academicSubjects;
 
     private String telephone;
 
@@ -29,8 +29,8 @@ public class Teachers {
                 " id=" + id + ",\n" +
                 " surname=" + surname + ",\n" +
                 " name=" + name + ",\n" +
-                " middle_name=" + middle_name + ",\n" +
-                " academic_subjects=" + academic_subjects + "\n" +
+                " middleName=" + middleName + ",\n" +
+                " academicSubjects=" + academicSubjects + "\n" +
                 " telephone=" + telephone + ",\n" +
                 "}" + "\n";
     }

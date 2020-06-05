@@ -18,7 +18,7 @@ public class AcademicPerformance {
     private Student stuent;
 
     @ManyToOne
-    private DirectoryItems directory_items;
+    private DirectoryItems directoryItems;
 
     @Override
     public String toString() {

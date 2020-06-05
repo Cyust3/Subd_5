@@ -8,18 +8,18 @@ public class TeachersgetByTelefon {
 
     private String name;
 
-    private String middle_name;
+    private String middleName;
 
-    private String academic_subjects;
+    private String academicSubjects;
 
     private String telephone;
 
-    public TeachersgetByTelefon(Integer id, String surname, String name, String middle_name, String academic_subjects, String telephone) {
+    public TeachersgetByTelefon(Integer id, String surname, String name, String middleName, String academicSubjects, String telephone) {
         this.id = id;
         this.surname = surname;
         this.name = name;
-        this.middle_name = middle_name;
-        this.academic_subjects = academic_subjects;
+        this.middleName = middleName;
+        this.academicSubjects = academicSubjects;
         this.telephone = telephone;
     }
 
@@ -47,20 +47,20 @@ public class TeachersgetByTelefon {
         this.name = name;
     }
 
-    public String getMiddle_name() {
-        return middle_name;
+    public String getMiddleName() {
+        return middleName;
     }
 
-    public void setMiddle_name(String middle_name) {
-        this.middle_name = middle_name;
+    public void setMiddleName(String middleName) {
+        this.middleName = middleName;
     }
 
-    public String getAcademic_subjects() {
-        return academic_subjects;
+    public String getAcademicSubjects() {
+        return academicSubjects;
     }
 
-    public void setAcademic_subjects(String academic_subjects) {
-        this.academic_subjects = academic_subjects;
+    public void setAcademicSubjects(String academicSubjects) {
+        this.academicSubjects = academicSubjects;
     }
 
     public String getTelephone() {

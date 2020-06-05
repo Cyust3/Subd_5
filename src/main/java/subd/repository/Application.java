@@ -58,14 +58,16 @@ public class Application {
     @EventListener(ApplicationReadyEvent.class)
     public void onStart() {
 
+        System.out.println(teachersService.getAll());
         this.readAcademicPerformance();
         this.readAcademicGroup();
         this.readDirectoryItems();
         this.readStudent();
-        this.readTeachers();
+        //this.readTeachers();
         this.firstRequest();
         this.secondRequest();
         this.thirdRequest();
+
     }
 
     public void readAcademicPerformance (){
@@ -119,8 +121,8 @@ public class Application {
             System.out.print("id: " + TeachersgetByTelefon.getId() + " ");
             System.out.print("Фамилия: " + TeachersgetByTelefon.getSurname() + " ");
             System.out.print("Имя: " + TeachersgetByTelefon.getName() + " ");
-            System.out.print("Отчество: " + TeachersgetByTelefon.getMiddle_name() + " ");
-            System.out.print("Предметы: " + TeachersgetByTelefon.getAcademic_subjects() + "  ");
+            System.out.print("Отчество: " + TeachersgetByTelefon.getMiddleName() + " ");
+            System.out.print("Предметы: " + TeachersgetByTelefon.getAcademicSubjects() + "  ");
             System.out.println("Телефон: " + TeachersgetByTelefon.getTelephone() + "  ");
         });
     }
@@ -133,7 +135,7 @@ public class Application {
 		resultFirst.forEach(StudentRating -> {
 			System.out.print("Фамилия: " + StudentRating.getSurname() + " ");
 			System.out.print("Имя: " + StudentRating.getName() + " ");
-            System.out.print("Отчество: " + StudentRating.getMiddle_name() + " ");
+            System.out.print("Отчество: " + StudentRating.getMiddleName() + " ");
             System.out.println("Оценка: " + StudentRating.getRating() + "  ");
 		});
 	}
