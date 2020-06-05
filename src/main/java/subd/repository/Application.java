@@ -58,51 +58,15 @@ public class Application {
     @EventListener(ApplicationReadyEvent.class)
     public void onStart() {
 
+        System.out.println(academicgroupService.getAll());
+        System.out.println(academicPerformanceService.getAll());
+        System.out.println(directoryItemsService.getAll());
+        System.out.println(studentService.getAll());
         System.out.println(teachersService.getAll());
-        this.readAcademicPerformance();
-        this.readAcademicGroup();
-        this.readDirectoryItems();
-        this.readStudent();
-        //this.readTeachers();
         this.firstRequest();
         this.secondRequest();
         this.thirdRequest();
 
-    }
-
-    public void readAcademicPerformance (){
-        Timestamp start = new Timestamp(System.currentTimeMillis());
-        System.out.println(academicPerformanceService.getAll());
-        Timestamp end = new Timestamp(System.currentTimeMillis());
-        System.out.println("Request time: " + (end.getTime() - start.getTime()) + " ms");
-    }
-
-    public void readAcademicGroup (){
-        Timestamp start = new Timestamp(System.currentTimeMillis());
-        System.out.println(academicgroupService.getAll());
-        Timestamp end = new Timestamp(System.currentTimeMillis());
-        System.out.println("Request time: " + (end.getTime() - start.getTime()) + " ms");
-    }
-
-    public void readDirectoryItems (){
-        Timestamp start = new Timestamp(System.currentTimeMillis());
-        System.out.println(directoryItemsService.getAll());
-        Timestamp end = new Timestamp(System.currentTimeMillis());
-        System.out.println("Request time: " + (end.getTime() - start.getTime()) + " ms");
-    }
-
-    public void readStudent (){
-        Timestamp start = new Timestamp(System.currentTimeMillis());
-        System.out.println(studentService.getAll());
-        Timestamp end = new Timestamp(System.currentTimeMillis());
-        System.out.println("Request time: " + (end.getTime() - start.getTime()) + " ms");
-    }
-
-    public void readTeachers (){
-        Timestamp start = new Timestamp(System.currentTimeMillis());
-        System.out.println(teachersService.getAll());
-        Timestamp end = new Timestamp(System.currentTimeMillis());
-        System.out.println("Request time: " + (end.getTime() - start.getTime()) + " ms");
     }
 
     public void firstRequest(){
