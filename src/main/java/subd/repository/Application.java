@@ -5,6 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
+import subd.repository.entity.*;
 import subd.repository.repository.*;
 import subd.repository.service.serviceInterfaces.*;
 
@@ -58,15 +59,46 @@ public class Application {
     @EventListener(ApplicationReadyEvent.class)
     public void onStart() {
 
-        System.out.println(academicgroupService.getAll());
-        System.out.println(academicPerformanceService.getAll());
-        System.out.println(directoryItemsService.getAll());
-        System.out.println(studentService.getAll());
-        System.out.println(teachersService.getAll());
-        this.firstRequest();
-        this.secondRequest();
-        this.thirdRequest();
 
+        this.readAcademicgroup();
+        this.readAcademicPerformance();
+        this.readDirectoryItems();
+        this.readStudent();
+        this.readTeachers();
+        //this.firstRequest();
+        //this.secondRequest();
+        //this.thirdRequest();
+
+    }
+
+    private void readAcademicgroup() {
+        for (Academicgroup academicgroup : academicgroupService.getAll()) {
+            System.out.println(academicgroup);
+        }
+    }
+
+    private void readAcademicPerformance(){
+        for(AcademicPerformance academicPerformance : academicPerformanceService.getAll()){
+            System.out.println(academicPerformance);
+        }
+    }
+
+    private void readDirectoryItems(){
+        for (DirectoryItems directoryItems : directoryItemsService.getAll()){
+            System.out.println(directoryItems);
+        }
+    }
+
+    private void readStudent(){
+        for(Student student : studentService.getAll()){
+            System.out.println(student);
+        }
+    }
+
+    private void readTeachers(){
+        for(Teachers teachers : teachersService.getAll()){
+            System.out.println(teachers);
+        }
     }
 
     public void firstRequest(){
@@ -81,6 +113,7 @@ public class Application {
         List<TeachersgetByTelefon> resultFirst = teachersRepository.teachers();
         Timestamp end = new Timestamp(System.currentTimeMillis());
         System.out.println("Request time: " + (end.getTime() - start.getTime()) + " ms");
+
         resultFirst.forEach(TeachersgetByTelefon -> {
             System.out.print("id: " + TeachersgetByTelefon.getId() + " ");
             System.out.print("Фамилия: " + TeachersgetByTelefon.getSurname() + " ");
@@ -96,7 +129,8 @@ public class Application {
 		List<StudentRating> resultFirst = studentRepository.studets();
 		Timestamp end = new Timestamp(System.currentTimeMillis());
         System.out.println("Request time: " + (end.getTime() - start.getTime()) + " ms");
-		resultFirst.forEach(StudentRating -> {
+
+        resultFirst.forEach(StudentRating -> {
 			System.out.print("Фамилия: " + StudentRating.getSurname() + " ");
 			System.out.print("Имя: " + StudentRating.getName() + " ");
             System.out.print("Отчество: " + StudentRating.getMiddleName() + " ");
